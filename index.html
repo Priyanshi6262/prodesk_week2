@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cash-Flow Dashboard</title>
+
+  <!-- Chart.js  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1>Cash-Flow Tracker</h1>
+
+<div class="container">
+
+  <div class="form-grid">
+
+    
+    <div class="field full">
+      <label>Total Salary</label>
+      <input type="number" id="salaryInput" placeholder="Enter salary">
+    </div>
+
+    <button onclick="saveSalary()">Save Salary</button>
+
+    
+    <div class="field">
+      <label>Expense Name</label>
+      <select id="expenseName">
+        <option value="">-- Select Expense --</option>
+        <option value="Food - Lunch">Food - Lunch</option>
+        <option value="Food - Dinner">Food - Dinner</option>
+        <option value="Rent - House Rent">Rent - House Rent</option>
+        <option value="Travel - Bus">Travel - Bus</option>
+        <option value="Travel - Train">Travel - Train</option>
+        <option value="Entertainment - Movie">Entertainment - Movie</option>
+        <option value="Other - Miscellaneous">Other - Miscellaneous</option>
+      </select>
+    </div>
+
+    
+    <div class="field">
+      <label>Expense Amount</label>
+      <input type="number" id="expenseAmount" placeholder="Amount">
+    </div>
+
+    <button onclick="addExpense()">Add Expense</button>
+
+  </div>
+
+  
+  <div class="summary">
+    <div>Salary: ₹ <span id="salaryDisplay">0</span></div>
+    <div>Balance: ₹ <span id="balanceDisplay">0</span></div>
+  </div>
+
+  <h3>Expenses</h3>
+  <ul id="expenseList"></ul>
+
+  <canvas id="expenseChart"></canvas>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
